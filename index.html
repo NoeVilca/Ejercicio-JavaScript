@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+</head>
+<body>
+    <script>
+        // Resolucion punto 1
+        // Variables con datos personales
+        let nombre = "Noelia Vilca";
+        let edad = 26;
+        let ciudad = "Buenos Aires";
+        
+        // Mostrar mensaje de bienvenida
+        window.onload = function() {
+            alert(`¡Bienvenido, ${nombre}!\nTienes ${edad} años y vives en ${ciudad}.`);
+        };
+    </script>
+
+    <script>
+        // Resolucion punto 2
+        // Solicitar datos al usuario
+        window.onload = function() {
+            let nombre = prompt("¿Cuál es tu nombre?");
+            let edad = prompt("¿Cuántos años tienes?");
+            let ciudad = prompt("¿De qué ciudad eres?");
+            
+            // Mostrar mensaje de bienvenida
+            alert(`¡Bienvenido, ${nombre}!\nTienes ${edad} años y vives en ${ciudad}.`);
+        };
+    </script>
+    <script>
+        // Resolucion punto 3
+        // Solicitar datos al usuario
+        window.onload = function() {
+            let nombre = prompt("¿Cuál es tu nombre?");
+            let edad = prompt("¿Cuántos años tienes?");
+            let ciudad = prompt("¿De qué ciudad eres?");
+            let fechaNacimiento = prompt("¿Cuál es tu fecha de nacimiento? (Formato: YYYY-MM-DD)");
+            
+            // Calcular los días vividos
+            let nacimiento = new Date(fechaNacimiento);
+            let hoy = new Date();
+            let diasVividos = Math.floor((hoy - nacimiento) / (1000 * 60 * 60 * 24));
+
+            // Mostrar mensaje de bienvenida y días vividos
+            alert(`¡Bienvenido, ${nombre}!\nTienes ${edad} años y vives en ${ciudad}.\nHas vivido ${diasVividos} días desde que naciste.`);
+        };
+    </script>
+
+</body>
+</html>
